@@ -2,7 +2,7 @@ const apiKey = 'mNJWN8kk70ODvZurQO55CeBfzYRuyVjy'
 //https://api.giphy.com/v1/gifs/random?api_key=mNJWN8kk70ODvZurQO55CeBfzYRuyVjy
 
 fetch( `https://api.giphy.com/v1/gifs/random?api_key=${ apiKey }` )
-    
+    /*
     .then( resp => {
         resp.json()
             .then( resp => {
@@ -14,8 +14,9 @@ fetch( `https://api.giphy.com/v1/gifs/random?api_key=${ apiKey }` )
                 document.body.append( img )
             } )
     }) 
-   
-    /* .then( resp => resp.json() )
+    Se puede refactorizar
+    */
+    .then( resp => resp.json() )
     .then( ( { data } ) => {
         const { url } = data.images.original
 
@@ -23,5 +24,5 @@ fetch( `https://api.giphy.com/v1/gifs/random?api_key=${ apiKey }` )
         img.src = url
 
         document.body.append( img )
-    }) */
+    })
     .catch( e => console.log(e) )
