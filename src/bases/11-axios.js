@@ -10,7 +10,9 @@ const giphyApi = axios.create({
     }
 })
 
-giphyApi.get('/random').then( resp => {
+export default giphyApi
+
+/* giphyApi.get('/random').then( resp => {
     
     const { data } = resp.data
     const { url } = data.images.original
@@ -20,3 +22,4 @@ giphyApi.get('/random').then( resp => {
 
     document.body.append(img)
 } ).catch( e => { console.log(e) } )
+ */
